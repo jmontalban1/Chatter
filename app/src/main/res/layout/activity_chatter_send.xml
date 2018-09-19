@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/send_chatter_background_color"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/send_chatter_title"
+        android:textColor="@color/send_chatter_title_color"
+        android:textSize="28sp" />
+
+    <EditText
+        android:id="@+id/edittext_send_chat"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="20dp"
+        android:background="@color/send_chatter_edit_text_background_color"
+        android:hint="@string/send_chatter_hint" />
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="@string/send_chatter_button_text"
+        android:textSize="16sp"
+        android:layout_margin="5sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button_send_data"/>
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:text="View Chats"
+        android:textSize="16sp"
+        android:layout_margin="5sp"
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/button_view_data"/>
+
+</LinearLayout>
