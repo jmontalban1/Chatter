@@ -79,6 +79,12 @@ public class ChatterReceiveActivity extends AppCompatActivity
                 Intent intent = new Intent(this,ChatterListActivity.class);
                 this.startActivity(intent);
             }
+            case R.id.menu_item_custom_list:
+            {
+                Intent intent = new Intent(this, ChatterCustomListActivity.class);
+                this.startActivity(intent);
+                break;
+            }
         }
         return true;
     }

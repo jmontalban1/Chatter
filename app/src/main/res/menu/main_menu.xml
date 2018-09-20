@@ -7,5 +7,7 @@
     android:title="View Jitters"/>
     <item android:id="@+id/menu_item_send_chats"
         android:title="Send Chats"/>
+    <item android:id="@+id/menu_item_custom_list"
+        android:title="Custom List"/>
 
 </menu>
