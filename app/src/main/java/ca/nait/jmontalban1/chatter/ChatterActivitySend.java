@@ -1,7 +1,10 @@
 package ca.nait.jmontalban1.chatter;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.StrictMode;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,10 +27,21 @@ import java.util.List;
 
 public class ChatterActivitySend extends AppCompatActivity implements View.OnClickListener {
 
+
+    SharedPreferences settings;
+    View mainView;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chatter_send);
+
+        settings = PreferenceManager.getDefaultSharedPreferences(this);
+
+
+        mainView = findViewById(R.id.send_activity_linear_ayout);
+        String bgColor = settings.getString("color_main_bg", "#009999");
+        mainView.setBackgroundColor(Color.parseColor(bgColor));
 
         // this is a hack to allow us to use the main UI thread
         // will be removed when we learn how to multithres
@@ -71,12 +85,13 @@ public class ChatterActivitySend extends AppCompatActivity implements View.OnCli
     }
     private void postToChatter(String chatter)
     {
+        String userName = settings.getString("user_name", "");
         try {
             HttpClient client = new DefaultHttpClient();
             HttpPost post = new HttpPost("http://www.youcode.ca/JitterServlet");
             List<NameValuePair> formParameters = new ArrayList<NameValuePair>();
             formParameters.add(new BasicNameValuePair("DATA", chatter));
-            formParameters.add(new BasicNameValuePair("LOGIN_NAME", "John"));
+            formParameters.add(new BasicNameValuePair("LOGIN_NAME", userName));
             UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(formParameters);
             post.setEntity(formEntity);
             client.execute(post);
@@ -106,6 +121,11 @@ public class ChatterActivitySend extends AppCompatActivity implements View.OnCli
             case R.id.menu_item_view_list:
             {
                 Intent intent = new Intent(this,ChatterListActivity.class);
+                this.startActivity(intent);
+            }
+            case R.id.menu_item_settings:
+            {
+                Intent intent = new Intent(this, SettingsActivity.class);
                 this.startActivity(intent);
             }
         }

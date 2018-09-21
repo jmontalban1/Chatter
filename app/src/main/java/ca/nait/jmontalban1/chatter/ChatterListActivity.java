@@ -1,7 +1,9 @@
 package ca.nait.jmontalban1.chatter;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ArrayAdapter;
 import android.widget.Toast;
 
@@ -87,6 +89,36 @@ public class ChatterListActivity extends ListActivity
         }
 
 
+    }
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        switch(item.getItemId())
+        {
+            case R.id.menu_item_send_chats:
+            {
+                Intent intent = new Intent(this,ChatterActivitySend.class);
+                this.startActivity(intent);
+                break;
+            }
+            case R.id.menu_item_view_list:
+            {
+                Intent intent = new Intent(this,ChatterListActivity.class);
+                this.startActivity(intent);
+            }
+            case R.id.menu_item_custom_list:
+            {
+                Intent intent = new Intent(this, ChatterCustomListActivity.class);
+                this.startActivity(intent);
+                break;
+            }
+            case R.id.menu_item_settings:
+            {
+                Intent intent = new Intent(this, SettingsActivity.class);
+                this.startActivity(intent);
+            }
+        }
+        return true;
     }
 }
 

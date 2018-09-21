@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <EditTextPreference
+        android:key="user_name"
+        android:summary="@string/prefs_user_name_summary"
+        android:title="@string/prefs_user_name_title"/>
+
+    <EditTextPreference
+        android:key="user_password"
+        android:summary="@string/prefs_password_summary"
+        android:title="@string/prefs_password_title"
+        android:password="true"/>
+
+    <EditTextPreference
+        android:key="color_main_bg"
+        android:summary="@string/prefs_main_bg_summary"
+        android:title="@string/prefs_main_bgcolor_title" />
+
+
+</PreferenceScreen>

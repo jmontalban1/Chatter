@@ -5,5 +5,12 @@
     <string name="send_chatter_button_text">Send chat</string>
     <string name="receive_chatter_title">Recent Chats</string>
     <string name="custom_list_empty_text">No chatter Available</string>
+    <string name="prefs_user_name_summary">Change Username</string>
+    <string name="prefs_user_name_title">Username</string>
+    <string name="prefs_password_title">Change your password</string>
+    <string name="prefs_password_summary">Password</string>
+    <string name="prefs_main_bg_summary">change your main background color</string>
+    <string name="prefs_main_bgcolor_title">Background Color</string>
+
 
 </resources>
