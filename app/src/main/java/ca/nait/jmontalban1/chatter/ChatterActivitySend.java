@@ -25,7 +25,12 @@ import org.apache.http.message.BasicNameValuePair;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ChatterActivitySend extends AppCompatActivity implements View.OnClickListener {
+public class ChatterActivitySend extends AppCompatActivity
+        implements View.OnClickListener, SharedPreferences.OnSharedPreferenceChangeListener
+
+
+
+{
 
 
     SharedPreferences settings;
@@ -37,11 +42,12 @@ public class ChatterActivitySend extends AppCompatActivity implements View.OnCli
         setContentView(R.layout.activity_chatter_send);
 
         settings = PreferenceManager.getDefaultSharedPreferences(this);
+        settings.registerOnSharedPreferenceChangeListener(this);
 
 
-        mainView = findViewById(R.id.send_activity_linear_ayout);
-        String bgColor = settings.getString("color_main_bg", "#009999");
-        mainView.setBackgroundColor(Color.parseColor(bgColor));
+        mainView = findViewById(R.id.send_activity_linear_layout);
+        String bgColor = settings.getString("main_bg_color_list", "#009999");
+        //mainView.setBackgroundColor(Color.parseColor(bgColor));
 
         // this is a hack to allow us to use the main UI thread
         // will be removed when we learn how to multithres
@@ -133,6 +139,10 @@ public class ChatterActivitySend extends AppCompatActivity implements View.OnCli
     }
 
 
-
-
+    @Override
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String s) {
+        mainView = findViewById(R.id.send_activity_linear_layout);
+        String bgColor = settings.getString("main_bg_color_list", "#009999");
+        mainView.setBackgroundColor(Color.parseColor(bgColor));
+    }
 }

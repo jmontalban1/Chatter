@@ -17,5 +17,14 @@
         android:summary="@string/prefs_main_bg_summary"
         android:title="@string/prefs_main_bgcolor_title" />
 
+    <ListPreference
+        android:entries="@array/colour_names"
+        android:entryValues="@array/colour_values"
+        android:key="main_bg_color_list"
+        android:summary="Select a color for your main background"
+        android:title="Background Color"
+
+        />
+
 
 </PreferenceScreen>
