@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ChatterReceiveActivity" />
-        <activity android:name=".SettingsActivity"></activity>
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".SimpleSpinnerActivity"></activity>
     </application>
 
 </manifest>

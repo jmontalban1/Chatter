@@ -17,4 +17,24 @@
         <item name="white">#ffffff</item>
         <item name="black">#000000</item>
     </string-array>
+
+
+    <string-array name="grade_ranges">
+        <item name="a">80-100</item>
+        <item name="b">70-79</item>
+        <item name="c">60-69</item>
+        <item name="d">50-59</item>
+        <item name="f">Below 50</item>
+    </string-array>
+
+
+    <string-array name="grade_names">
+        <item name="a">A</item>
+        <item name="b">B</item>
+        <item name="c">C</item>
+        <item name="d">D</item>
+        <item name="f">FAIL</item>
+    </string-array>
+
+
 </resources>

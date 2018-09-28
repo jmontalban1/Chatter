@@ -45,7 +45,7 @@ public class ChatterActivitySend extends AppCompatActivity
         settings.registerOnSharedPreferenceChangeListener(this);
 
 
-        mainView = findViewById(R.id.send_activity_linear_layout);
+        this.mainView = findViewById(R.id.send_activity_linear_layout);
         String bgColor = settings.getString("main_bg_color_list", "#009999");
         //mainView.setBackgroundColor(Color.parseColor(bgColor));
 
@@ -128,11 +128,19 @@ public class ChatterActivitySend extends AppCompatActivity
             {
                 Intent intent = new Intent(this,ChatterListActivity.class);
                 this.startActivity(intent);
+                break;
             }
             case R.id.menu_item_settings:
             {
                 Intent intent = new Intent(this, SettingsActivity.class);
                 this.startActivity(intent);
+                break;
+            }
+            case R.id.menu_item_simple_spinner:
+            {
+                Intent intent = new Intent(this, SimpleSpinnerActivity.class);
+                this.startActivity(intent);
+                break;
             }
         }
         return true;
