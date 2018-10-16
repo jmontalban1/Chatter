@@ -13,6 +13,8 @@
         android:title="Settings"/>
     <item android:id="@+id/menu_item_simple_spinner"
         android:title="Grade Spinner"/>
+    <item android:id="@+id/menu_item_Object_spinner"
+        android:title="Object Spinner"/>
 
 
 </menu>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFC0CB"
+    android:orientation="vertical"
+    tools:context="ca.nait.jmontalban1.chatter.ChatterObjectActivity">
+
+    <spinner
+        android:id="@+id/spinner_chatter_objects"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:dropDownWidth="400dp"
+        android:prompt="@string/spinner_prompt"></spinner>
+    <EditText
+    android:id="@+id/edittext_sender"
+    android:layout_width="100dp"
+    android:layout_height="24dp"
+    android:layout_marginBottom="20dp"
+    android:layout_marginLeft="20dp"
+    android:background="#cacaca"
+    android:textSize="12sp"
+    android:textColor="#ccffff00"
+    android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/edittext_date"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#cacaca"
+        android:textSize="12sp"
+        android:textColor="#ccffff00"
+        android:textStyle="bold"/>
+    <EditText
+        android:id="@+id/edittext_message"
+        android:layout_width="100dp"
+        android:layout_height="24dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="20dp"
+        android:background="#cacaca"
+        android:textSize="12sp"
+        android:textColor="#ccffff00"
+        android:textStyle="bold"/>
+
+
+</android.support.constraint.ConstraintLayout>

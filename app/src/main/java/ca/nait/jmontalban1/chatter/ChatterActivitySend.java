@@ -142,6 +142,12 @@ public class ChatterActivitySend extends AppCompatActivity
                 this.startActivity(intent);
                 break;
             }
+            case R.id.menu_item_Object_spinner:
+            {
+                Intent intent = new Intent(this, SimpleSpinnerActivity.class);
+                this.startActivity(intent);
+                break;
+            }
         }
         return true;
     }

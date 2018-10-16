@@ -20,7 +20,8 @@
         </activity>
         <activity android:name=".ChatterReceiveActivity" />
         <activity android:name=".SettingsActivity" />
-        <activity android:name=".SimpleSpinnerActivity"></activity>
+        <activity android:name=".SimpleSpinnerActivity" />
+        <activity android:name=".ChatterObjectActivity"></activity>
     </application>
 
 </manifest>
